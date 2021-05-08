@@ -12,6 +12,9 @@ class AboutUs(models.Model):
         verbose_name = "О нас"
         verbose_name_plural = "О нас"
 
+    def __str__(self):
+        return self.title
+
 
 class TeamCodifyLab(models.Model):
     name = models.CharField(max_length=255)
@@ -21,6 +24,10 @@ class TeamCodifyLab(models.Model):
     class Meta:
         verbose_name = "Команда CodifyLab"
         verbose_name_plural = "Команды CodifyLab"
+
+
+    def __str__(self):
+        return self.title
 
 
 
@@ -37,6 +44,9 @@ class ContanctsCodifyLab(models.Model):
         verbose_name = "Контакт"
         verbose_name_plural = "Контакты"
 
+    def __str__(self):
+        return self.title
+
 
 class Plus(models.Model):
     title = models.CharField(max_length=255)
@@ -46,6 +56,9 @@ class Plus(models.Model):
     class Meta:
         verbose_name = "Преимущество"
         verbose_name_plural = "Преимущества"
+
+    def __str__(self):
+        return self.title
 
 
 class Franchise(models.Model):
@@ -58,6 +71,10 @@ class Franchise(models.Model):
         verbose_name_plural = "Франшизы"
 
 
+    def __str__(self):
+        return self.title
+
+
 class Application(models.Model):
     name = models.CharField(max_length=250)
     message = models.TextField()
@@ -68,6 +85,9 @@ class Application(models.Model):
     class Meta:
         verbose_name = "Форма отправки"
         verbose_name_plural = "Форма отправки"
+
+    def __str__(self):
+        return self.title
 
 
 class Feedback(models.Model):
@@ -82,6 +102,9 @@ class Feedback(models.Model):
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
 
+    def __str__(self):
+        return self.title
+
 
 class FAQ(models.Model):
     question = models.TextField()
@@ -91,3 +114,5 @@ class FAQ(models.Model):
         verbose_name = "Вопрос"
         verbose_name_plural = "Вопросы"
 
+    def __str__(self):
+        return self.title
