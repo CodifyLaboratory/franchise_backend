@@ -46,3 +46,11 @@ class Application(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
 
+class Feedback(models.Model):
+    name = models.CharField(max_length=250)
+    img_feedback = models.ImageField(upload_to="Feedbacks_img", null=True, blank=True, verbose_name="Картинки отзывов)")
+    message = models.TextField()
+    mail = models.EmailField(max_length=254)
+    phone_number = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
