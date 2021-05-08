@@ -54,3 +54,8 @@ class Feedback(models.Model):
     phone_number = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
+
+class FAQ(models.Model):
+    question = models.TextField()
+    answer = models.TextField()
+
