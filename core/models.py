@@ -30,4 +30,10 @@ class Plus(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     img_plus = models.ImageField(upload_to="Plus_img", blank=True, null=True, verbose_name="Картинки Plus")
-    
+
+
+class Franchise(models.Model):
+    name = models.CharField(max_length=250)
+    text = models.TextField()
+    img_franchise = models.ImageField(upload_to="Franchise_img", blank=True, null=True, verbose_name="Картинки франишизы")
+
