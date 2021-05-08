@@ -37,3 +37,12 @@ class Franchise(models.Model):
     text = models.TextField()
     img_franchise = models.ImageField(upload_to="Franchise_img", blank=True, null=True, verbose_name="Картинки франишизы")
 
+
+class Application(models.Model):
+    name = models.CharField(max_length=250)
+    message = models.TextField()
+    mail = models.EmailField(max_length=254)
+    phone_number = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
+
