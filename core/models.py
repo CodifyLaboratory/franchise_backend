@@ -24,3 +24,10 @@ class ContanctsCodifyLab(models.Model):
     instagram = models.CharField(max_length=55)
     twitter = models.CharField(max_length=55)
     facebook = models.CharField(max_length=55)
+
+
+class Plus(models.Model):
+    title = models.CharField(max_length=255)
+    text = models.TextField()
+    img_plus = models.ImageField(upload_to="Plus_img", blank=True, null=True, verbose_name="Картинки Plus")
+    
